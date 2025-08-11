@@ -315,33 +315,10 @@
         </div>
 
         <footer>
-            <p>&copy; 2024 Bayard Sheppard-Holt. All rights reserved.</p>
+            <p>&copy; 2025 Bayard Sheppard-Holt. All rights reserved.</p>
         </footer>
     </div>
 
-    <script>
-        // Add click handlers for placeholder images
-        document.querySelectorAll('.placeholder').forEach(placeholder => {
-            placeholder.addEventListener('click', function() {
-                const input = document.createElement('input');
-                input.type = 'file';
-                input.accept = 'image/*';
-                input.onchange = function(e) {
-                    const file = e.target.files[0];
-                    if (file) {
-                        const reader = new FileReader();
-                        reader.onload = function(e) {
-                            const img = document.createElement('img');
-                            img.src = e.target.result;
-                            placeholder.innerHTML = '';
-                            placeholder.appendChild(img);
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                };
-                input.click();
-            });
-        });
-    </script>
+   
 </body>
 </html>
